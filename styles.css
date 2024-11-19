@@ -32,7 +32,6 @@ body {
 .nav {
   list-style: none;
   display: flex;
-  align-items: center;
   text-transform: uppercase;
 }
 
