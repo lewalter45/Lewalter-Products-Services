@@ -1,182 +1,307 @@
-/* General Reset */
+/* General Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Font Settings */
 body {
-  font-family: "Playfair Display", serif;
-  background-color: #f4f4f4; /* Neutral background for overall site */
-  color: #000; /* Default text color */
-}
-
-/* Navbar Styling */
-.navbar {
-  background-color: rgba(46, 24, 52, 0.8); /* Dark purple */
-  color: #ffffff; /* White text */
+  font-family: "Lato", sans-serif;
+  background-color: #f8f8f8; /* Light gray/off-white background */
+  color: #3a0057; /* Dark purple text (adjust shade as needed) */
+  line-height: 1.6;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-/* Navigation Container */
-.nav-container {
-  display: flex;
-  align-items: center;
-}
-
-/* Navigation Links Styling */
-.nav {
-  list-style: none;
-  display: flex;
-  text-transform: uppercase;
-}
-
-.nav li {
-  margin: 0 15px;
-}
-
-.nav a {
-  color: #ffffff; /* White links */
-  text-decoration: none;
-  font-size: 16px;
-  transition: color 0.3s ease;
-}
-
-.nav a:hover {
-  color: #cc9901; /* Bright gold on hover */
-}
-
-/* Logo Styling */
-.logo {
-  display: flex;
-  align-items: center;
-}
-.logo img {
-  height: 50px; /* Adjust logo size */
-  border-radius: 50%;
-}
-
-.logo a {
-  font-size: 20px;
-  font-weight: bold;
-  color: #ffffff;
-  text-decoration: none;
-}
-
-/* Contact Menu */
-.contact-menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #4c275c; /* Mid purple */
-  padding: 10px 20px;
-}
-.contact-details {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-.contact-details a {
-  color: #ffffff; /* White for text and icons */
-  font-size: 16px;
-  text-decoration: none;
-  margin-right: 20px;
-  display: flex;
-  align-items: center;
-}
-.contact-details a i {
-  margin-right: 10px;
-}
-
-.contact-details a:hover {
-  color: #a57c00; /* Gold on hover */
-}
-.social-icons {
-  display: flex;
-  gap: 15px;
-}
-.social-icons a i {
-  color: #ffffff; /* White icons */
-  font-size: 20px;
-  margin-left: 15px;
-  transition: color 0.3s ease;
-}
-
-.social-icons a:hover i {
-  color: #a57c00; /* Gold on hover */
-}
-
-/* Buttons */
-button,
-.button {
-  background-color: #a57c00; /* Gold buttons */
-  color: #ffffff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover,
-.button:hover {
-  background-color: #cc9901; /* Bright gold on hover */
-}
-
-/* Section Styling */
-.section {
-  padding: 40px 20px;
-}
-
-.section:nth-child(odd) {
-  background-color: #ffffff; /* White for alternating sections */
-}
-
-.section:nth-child(even) {
-  background-color: #2e1834; /* Dark purple */
-  color: #ffffff; /* White text in dark sections */
-}
-
-/* Headings */
-h1,
-h2,
-h3 {
-  color: #a57c00; /* Gold for main headings */
-}
-
-h4,
-h5,
-h6 {
-  color: #4c275c; /* Mid purple for subheadings */
-}
-
-/* Links */
-a {
-  color: #a57c00; /* Gold links */
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #cc9901; /* Bright gold on hover */
-}
-
-/* Footer */
-footer {
-  background-color: #2e1834; /* Dark purple */
-  color: #ffffff;
+header {
+  padding: 20px;
   text-align: center;
+  background-color: rgba(102, 0, 153, 0.3);
+}
+
+/* Navigation */
+nav {
+  background-color: #660099; /* Deep purple background */
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky; /* Make the nav sticky */
+  top: 0; /* Stick to the top of the viewport */
+  z-index: 100; /* Ensure nav is above other content */
+}
+
+nav a {
+  /* Styles for all nav links */
+  text-decoration: none;
+  color: white; /* White navigation links */
+  font-weight: bold;
+  border-radius: 30px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+  background-color: #f9d402; /* Gold hover effect */
+  color: #3a0057; /* Dark purple text on hover */
+}
+
+main {
+  flex: 1;
   padding: 20px;
 }
 
-footer a {
-  color: #a57c00;
+.hero {
+  position: relative;
+  width: 100%;
+  height: 500px; /* Or your desired height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  overflow: hidden; /* Prevents the placeholder from overflowing */
 }
 
-footer a:hover {
-  color: #cc9901;
+.hero-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4b0082; /* A darkish purple - adjust as you like */
+}
+
+.hero-content {
+  position: relative; /* To be above the placeholder */
+  z-index: 1; /* Ensure content is above the placeholder */
+  text-align: center; /* Center text horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content vertically */
+  padding: 20px; /* Add some padding */
+}
+
+.hero h1 {
+  font-size: 2.5em; /* Adjust as needed */
+  margin-bottom: 10px;
+  font-family: "Lato", sans-serif; /* Choose your font */
+  color: white; /* Text color */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent background for readability */
+  padding: 10px; /* Add padding to the heading */
+  border-radius: 5px; /* Add border radius */
+}
+
+.hero h2 {
+  /* If you're using h2s elsewhere on the page, style them here */
+}
+
+.hero p {
+  font-size: 1.2em; /* Adjust as needed */
+  margin-bottom: 20px;
+  font-family: "Lato", sans-serif; /* Choose your font */
+  color: white; /* Text color */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent background for readability */
+  padding: 10px; /* Add padding to the paragraph */
+  border-radius: 5px; /* Add border radius */
+  max-width: 800px; /* Set a maximum width for the paragraph */
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f9d402; /* Gold button */
+  color: #3a0057; /* Dark purple text on button */
+  text-decoration: none;
+  border-radius: 30px;
+  margin-top: 20px;
+  transition: background-color 0.3s, color 0.3s;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif; /* Choose your font */
+}
+
+.button:hover {
+  background-color: #c79c0e; /* A slightly darker gold on hover */
+  color: white;
+}
+
+footer {
+  background-color: #660099; /* Deep purple background */
+  color: white; /* White text in footer */
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-container .contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.footer-container .contact-item {
+  display: flex;
+  align-items: center;
+  margin: 0 15px;
+  white-space: nowrap;
+}
+
+.footer-container .contact-label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.contact-info i {
+  margin-right: 5px;
+}
+
+.contact-link {
+  color: white;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  color: #f9d402;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.social-media a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  color: white;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #f9d402;
+}
+
+.copyright {
+  font-size: 0.8em;
+  color: #9c59bd;
+}
+
+@media (max-width: 768px) {
+  /* Combined media queries */
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .social-media {
+    margin-bottom: 0;
+    margin-left: 0; /* Align to the left on mobile */
+    justify-content: center; /* Center horizontally */
+  }
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Logo Styles */
+.logo {
+  text-decoration: none; /* Removes underline from link */
+  color: #f9d402; /* Gold logo */
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Add some spacing between logo and first link */
+  font-size: 1.2em; /* Adjust as needed */
+  border-radius: 80px;
+}
+
+.logo img {
+  max-height: 40px; /* Adjust max height as needed */
+  margin-right: 10px; /* Space between image and text */
+}
+
+/* Dropdown Menu Styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #660099;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f9d402;
+  color: #3a0057;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown > a.nav-link {
+  cursor: pointer;
+}
+
+/* Submenu Styles */
+.dropdown-submenu {
+  position: relative;
+  display: block; /* Important to make it a block element */
+  margin-bottom: 5px; /* Add some space between items */
+}
+
+.dropdown-submenu-content {
+  display: none;
+  position: absolute;
+  left: 100%; /* Position to the right of the parent menu */
+  top: 0;
+  background-color: #660099;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 8px 16px;
+  z-index: 1;
+}
+
+.dropdown-submenu:hover .dropdown-submenu-content {
+  display: block;
 }
