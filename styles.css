@@ -171,11 +171,6 @@ footer {
   white-space: nowrap;
 }
 
-.footer-container .contact-label {
-  font-weight: bold;
-  margin-right: 5px;
-}
-
 .contact-info i {
   margin-right: 5px;
 }
@@ -208,6 +203,18 @@ footer {
 
 .social-media a:hover {
   color: #f9d402;
+}
+
+.social-icon {
+  width: 20px; /* Adjust the size as needed */
+  height: 20px;
+  vertical-align: middle; /* Align the icon with other content */
+  margin: 0 5px; /* Add some spacing around the icon */
+}
+
+/* Specific rule for the Facebook group icon */
+.social-media a img[src="images/facebook-group-icon.png"] {
+  filter: invert(100%); /* Make the icon white */
 }
 
 .copyright {
