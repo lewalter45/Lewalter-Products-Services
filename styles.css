@@ -102,9 +102,7 @@ main {
   border-radius: 5px; /* Add border radius */
 }
 
-.hero h2 {
-  /* If you're using h2s elsewhere on the page, style them here */
-}
+/* If you're using h2s elsewhere on the page, style them here */ /* If you're using h2s elsewhere on the page, style them here */
 
 .hero p {
   font-size: 1.2em; /* Adjust as needed */
